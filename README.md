@@ -1,6 +1,6 @@
 # Rasta
 
-Raster drawing, but more laid-back.
+Raster images, relaxed.
 
 ## Pre-requisites
 
