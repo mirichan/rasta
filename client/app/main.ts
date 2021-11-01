@@ -3,9 +3,8 @@ import ComputeWorker from "./compute.worker";
 import { ComputeMessage } from "./custom-worker";
 import { WorkerPool } from "./worker-pool";
 
-const width = 400;
-const aspectRatio = 3 / 2;
-const height = width / aspectRatio;
+const width = 255;
+const height = 255;
 
 const canvas = document.createElement("canvas");
 canvas.id = "render";

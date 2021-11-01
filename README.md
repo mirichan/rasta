@@ -1,6 +1,6 @@
-# Lucifer
+# Rasta
 
-He brings the light.
+Raster drawing, but more laid-back.
 
 ## Pre-requisites
 
