@@ -30,8 +30,16 @@ pub fn get_buffer(width: usize, height: usize, row0: usize, rows: usize) -> Vec<
     //     })
     //     .collect()
     let mut image = Image::new(width, rows, Color::BLACK);
+    for y in 0..rows {
+        for x in 0..width {
+            image.set(
+                x,
+                y,
+                Color::new(1.0, x as f64 / width as f64, y as f64 / height as f64),
+            );
+        }
+    }
 
-    image.set(0, 0, Color::RED);
     image.line(0, 0, width - 1, height - 1, Color::GREEN);
     image.line(width - 1, 0, 0, height - 1, Color::GREEN);
     image.line(
