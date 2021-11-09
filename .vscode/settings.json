@@ -38,5 +38,8 @@
     "vscode-pets.position": "explorer",
     "vscode-pets.petColor": "red",
     "vscode-pets.petSize": "medium",
-    "rust-analyzer.inlayHints.enable": true
+    "rust-analyzer.inlayHints.enable": true,
+    "files.watcherExclude": {
+        "**/target": true
+    }
 }

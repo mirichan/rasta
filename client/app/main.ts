@@ -14,17 +14,21 @@ document.body.appendChild(canvas);
 
 const ctx = canvas.getContext("2d");
 
-WorkerPool.create(ComputeWorker, (message: ComputeMessage) => {
-    switch (message.type) {
-        case "image":
-            ctx.putImageData(
-                message.data,
-                0,
-                height - message.rows - message.row0
-            );
-            break;
-    }
-}).then((pool) => {
+WorkerPool.create(
+    ComputeWorker,
+    (message: ComputeMessage) => {
+        switch (message.type) {
+            case "image":
+                ctx.putImageData(
+                    message.data,
+                    0,
+                    height - message.rows - message.row0
+                );
+                break;
+        }
+    },
+    1
+).then((pool) => {
     for (let i = 0; i < pool.size; i++) {
         pool.postMessage({
             type: "test",
